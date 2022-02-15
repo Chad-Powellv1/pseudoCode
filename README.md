@@ -11,7 +11,7 @@
 <br>
 <br>
 
-### **Important Items**
+# **Important Items**
 <br>
 
   * If the pilot light goes out a device must be installed to automatically shut off the gas to protect the end user from harm.
@@ -23,8 +23,9 @@
   * A manual igniter system to ensure the pilot light cannot be lite remotely, ensuring the fireplace has been inspected before the first use of the season.
 
   <br>
+  <br>
 
-  ## **Objects**
+  # **Objects**
 
   * **Propane / Natural Gas** -> Purchased and installed by end user.
 
@@ -36,9 +37,9 @@
 
         * Ignitor -> Ignites the fire with an electric spark.
 
-        * Pilot light -> A small flame that stays lite, to help lite the burner.
+        * Pilot light -> A unit that produces a small flame which stays lite, to help lite the main burner.
 
-        * Thermocouple -> Measures the temperature of the pilot light, to ensure constant operation. If the pilot goes out the Thermocouple will send a signal to the emergency shut off valve preventing the gas from contining to flow.
+        * Thermocouple -> Measures the temperature of the pilot light, and ensures it's constant operation. If the pilot goes out the Thermocouple will send a signal to the emergency shut off valve preventing the gas from contining to flow.
 
         * Emergency Shut Off Valve -> Shuts off the gas supply if a signal is received from the Thermocouple.
 
@@ -46,7 +47,13 @@
 
         * Remote infrared/bluetooth sensor -> Used to create a wireless connection between the remote control and the gas fireplace.
 
-        * Manual Gas Controls -> Used to control the flame volume on the fireplace burner unit.
+        * Manual Controls
+        
+           * Flame Control  -> Used to control the flame volume on the fireplace burner unit. **Note**: turns left to lower flame and right to raise flame, controlling gas flow. 
+
+             * Flame Control (Push) -> When the flame conrol knob is pushed down it provides a controlled amount of gas, which is used to ignite the pilot light. 
+
+           *  Ignitor Button -> Used to produce an electic spark igniting the pilot lite. Must be used in conjuction with the push feature of the Flame Control (Push) feature.
 
  * Wireless Remote
 
@@ -65,5 +72,6 @@
        * Set button -> Sets the temperature for the thermostat.
 
        * Batteries -> Two (2) triple (AAA) batteries provide power to the remote. **Note**: first set of batteries will be provided to end user, all replacements will be the responsibility of the end user.
+
 
 
