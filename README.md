@@ -18,7 +18,7 @@
 
  * A conversion must be built in, to the thermostat, so the unit can be used in multiple markets for Fahrenheit or Celsius temperature readings.
 
-  * A safe high temperature setting must be set so an end user cannot accidently set the temperature above the recommended temperature setting for the fireplace specifications.
+  * A safe high temperature setting must be set so an end user cannot accidentally set the temperature above the recommended temperature setting for the fireplace specifications.
   
   * A manual igniter system to ensure the pilot light cannot be lite remotely, ensuring the fireplace has been inspected before the first use of the season.
 
@@ -35,11 +35,11 @@
 
      * Fireplace insert -> Holds fireplace components.
 
-        * Ignitor -> Ignites the fire with an electric spark.
+        * Igniter -> Ignites the fire with an electric spark.
 
         * Pilot light -> A unit that produces a small flame which stays lite, to help lite the main burner.
 
-        * Thermocouple -> Measures the temperature of the pilot light, and ensures it's constant operation. If the pilot goes out the Thermocouple will send a signal to the emergency shut off valve preventing the gas from contining to flow.
+        * Thermocouple -> Measures the temperature of the pilot light, and ensures it's constant operation. If the pilot goes out the Thermocouple will send a signal to the emergency shut off valve preventing the gas from continuing to flow.
 
         * Emergency Shut Off Valve -> Shuts off the gas supply if a signal is received from the Thermocouple.
 
@@ -51,15 +51,15 @@
         
            * Flame Control  -> Used to control the flame volume on the fireplace burner unit. **Note**: turns left to lower flame and right to raise flame, controlling gas flow. 
 
-             * Flame Control (Push) -> When the flame conrol knob is pushed down it provides a controlled amount of gas, which is used to ignite the pilot light. 
+             * Flame Control (Push) -> When the flame control knob is pushed down it provides a controlled amount of gas, which is used to ignite the pilot light. 
 
-           *  Ignitor Button -> Used to produce an electic spark igniting the pilot lite. Must be used in conjuction with the push feature of the Flame Control (Push) feature.
+           *  Igniter Button -> Used to produce an electric spark igniting the pilot lite. Must be used in conjunction with the push feature of the Flame Control (Push) feature.
 
  * Wireless Remote
 
-    * Digital display -> Displays the current ambient room tempurate.
+    * Digital display -> Displays the current ambient room temperature.
 
-    * Thermostat -> Senses the ambient room temperaure and turns the fireplace on or off if it is set.
+    * Thermostat -> Senses the ambient room temperature and turns the fireplace on or off if it is set.
 
     * Buttons 
 
