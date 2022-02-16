@@ -6,7 +6,7 @@
 
 <p><img src = './img/fire.jpg' alt = 'Gas Fireplace' width = '150' /></p>
 
-### **Operational Expectations**: The end user should be able to turn the fireplace on or off at any desired time or set the unit to operate based on a desired room temperature. The fireplace will be operated remotely with a wireless remote control.
+### **Operational Expectations**: The end user will be able to turn the fireplace on or off at any desired time or set the unit to operate based on a desired room temperature. The fireplace will be operated manually or remotely with a wireless remote control.
 
 <hr>
 <br>
@@ -16,9 +16,9 @@
 
 <br>
 
-- If the pilot light goes out a device must be installed to automatically shut off the gas to protect the end user from harm.
+- If the pilot light goes out a device must be installed to automatically shut off gas flow to protect the end user from harm.
 
-- A conversion must be built in, to the thermostat, so the unit can be used in multiple markets for Fahrenheit or Celsius temperature readings.
+- A temperature conversion must be built in, to the thermostat, so the unit can be used in multiple markets for Fahrenheit or Celsius temperature readings.
 
 - A safe high temperature setting must be set so an end user cannot accidentally set the temperature above the recommended temperature setting for the fireplace specifications.
 
@@ -93,11 +93,13 @@
 
   - Connects to the Gas Line Object with a Gas Line Fitting
 
-  - Manual gas valve: CONTROLS the flow of gas from the Gas Tank Object to the Gas Fireplace Object.
+  - Manual gas valve:
 
-    - IF valve is turned all the way to the right THEN gas is off.
+    - **FUNCTION**: Controls the flow of gas from the Gas Tank Object to the Gas Fireplace Object.
 
-    - IF valve is turned all the way to the left THEN gas is on.
+      - IF user TURNS valve to the right THEN gas will not flow.
+
+      - IF user TURNS valve to the left THEN gas will flow.
 
 <br>
 
@@ -105,15 +107,15 @@
 
   - Supplies the gas from the Gas Tank Object to the Gas Fireplace Object.
 
-  - Connects to the Gas Tank Object with a Gas Line Fitting.
+  - Connects to the Gas Tank Object to the Gas Burner Object with the Gas Line Fitting Object.
 
-  - Manual/Electronic gas valve: CONTROLS the flow of gas from the tank.
+  - ### **Manual/Electronic gas valve**:
 
-    - IF valve is turned all the way to the right OR the Thermocouple Object is not sending an electric signal THEN gas is off.
+    - **FUNCTION**: Controls the flow of gas from Gas Tank Object to Gas Fireplace Object.
 
-    - IF valve is turned all the way to the left AND Thermocouple Object is sending an electric signal THEN gas is on.
+      - IF user TURNS valve to the right THEN gas will not flow OR Thermocouple Object NOT sending electric signal THEN gas will not flow.
 
-  - Connects to the Gas Burner Object was a Gas Line Fitting Object.
+      - IF user TURNS valve to the left THEN gas will flow AND Thermocouple Object IS sending electric signal THEN gas will flow.
 
 <br>
 
@@ -133,17 +135,21 @@
 
     - The Rock Wool Object sits in the bottom of the Fireplace Insert Object in front of and on top of the Gas Burner Object to provide the appearance of glowing embers.
 
-    - The Manual Control Unit Object CONTROLS the volume of the flame produced by the Gas Burner Object.
+    - ### **Manual Control Unit Object**:
 
-      - The Flame Control Knob will provide a minimum and maximum amount the flame can be adjusted.
+      - **FUNCTION**: Controls the volume of the flame produced by the Gas Burner Object.
 
-      - IF Flame Control Knob is LESS THAN 50% THEN the Gas Burner Object will produce a flame volume LESS THAN 50% capacity.
+        - The Flame Control Knob will provide a minimum and maximum amount the flame can be adjusted.
 
-      - IF Flame Control Knob is GREATER THAN 50% THEN the Gas Burner Object will produce a flame volume GREATER THAN 50% capacity.
+        - IF Flame Control Knob is LESS THAN 50% THEN the Gas Burner Object will produce a flame volume LESS THAN 50% capacity.
 
-    - The Igniter Object mounts to the Gas Burner Object assembly and electric power. It produces an electric spark to ignite the gas in the Pilot light Object.
+        - IF Flame Control Knob is GREATER THAN 50% THEN the Gas Burner Object will produce a flame volume GREATER THAN 50% capacity.
 
-      - IF electric is connected on THEN ONCLICK Igniter Button Object will produce an electric spark.
+    - ### **The Igniter Object**: //////////////>>>>>>>>>
+
+    mounts to the Gas Burner Object assembly and electric power. It produces an electric spark to ignite the gas in the Pilot light Object.
+
+    - IF electric is connected on THEN ONCLICK Igniter Button Object will produce an electric spark.
 
     - The Pilot light Object is connected to the Gas Burner Object and lite by the Igniter Object.
 
