@@ -6,7 +6,7 @@
 
 <p><img src = './img/fire.jpg' alt = 'Gas Fireplace' width = '150' /></p>
 
-### **Operational Expectations**: The end user will be able to turn the fireplace on or off at any desired time or set the unit to operate based on a desired room temperature. The fireplace will be operated manually or remotely with a wireless remote control.
+### **Operational Expectations**: The end-user will be able to turn the fireplace on or off at any desired time or set the unit to operate based on the desired room temperature. The fireplace controls are manual or remote via wireless remote control.
 
 <hr>
 <br>
@@ -16,13 +16,13 @@
 
 <br>
 
-- If the pilot light goes out a device must be installed to automatically shut off gas flow to protect the end user from harm.
+- If the pilot light goes out, a device must be installed to automatically shut off gas flow to protect the end user from harm.
 
-- A temperature conversion must be built in, to the thermostat, so the unit can be used in multiple markets for Fahrenheit or Celsius temperature readings.
+- The thermostat must have a conversion option so the unit will work in multiple markets. (Fahrenheit / Celsius)
 
-- A safe high temperature setting must be set so an end user cannot accidentally set the temperature above the recommended temperature setting for the fireplace specifications.
+- A safe, high-temperature setting must be set so an end-user cannot accidentally set the temperature above the recommended temperature setting for the fireplace specifications.
 
-- A manual igniter system to ensure the pilot light cannot be lite remotely, ensuring the fireplace has been inspected before the first use of the season.
+- A manual igniter system to ensure the pilot light cannot be lit remotely, ensuring the fireplace has been inspected before the first use of the season.
 
   <br>
   <br>
