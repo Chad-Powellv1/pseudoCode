@@ -53,13 +53,14 @@
   - Manual Control Unit
     - Flame Control Knob
     - Pilot light Control Feature (Push)
+    - Electronic Controlled Gas Valve
   - Pilot light
   - Igniter
     - Igniter Button
   - Thermocouple
   - Remote infrared/Bluetooth sensor unit
 
-<br>
+<br/><br/>
 
 - Wireless Remote Control
 
@@ -79,8 +80,7 @@
 
     - Batteries: Two (2) triple (AAA) batteries provide power to the remote. **Note**: first set of batteries will be provided to end user, all replacements will be the responsibility of the end user.
 
-<br>
-<br>
+<br/><br/>
 
 # **Objects, Functions, & Dependencies**
 
@@ -91,16 +91,22 @@
   - Gas Tank Object STORES gas for Gas Fireplace object.
 
   - Gas Tank Object CONNECTS to Gas Line Object with Gas Line Fitting.
+
     <br/><br/>
-  - ### **Manual gas valve**:
+
+- ### **Manual gas valve**:
 
   - Part of the Gas Tank Object (Purchased by end-user)
 
     - **FUNCTION**: CONTROLS the flow of gas from the Gas Tank Object to Gas Line Object.
 
-      - IF user TURNS Manual Gas Tank valve to the right THEN gas WILL NOT flow.
+      - IF user TURNS Manual Gas Tank valve to the right
 
-      - IF user TURNS Manual Gas Tank valve to the left THEN gas WILL flow.
+      - THEN gas WILL NOT flow.
+
+      - IF user TURNS Manual Gas Tank valve to the left
+
+      - THEN gas WILL flow.
 
 <br/><br/>
 
@@ -111,16 +117,22 @@
   - SUPPLIES gas from Gas Tank Object to Gas Fireplace Object.
 
   - Gas Line Object CONNECTS to Gas Burner Object with Gas Line Fitting.
+
     <br/><br/>
-  - ### **Manual Burner Gas valve**:
+
+- ### **Manual Burner Gas valve**:
 
   - Purchased by end-user and installed by licensed professional. IManual Operation)
 
     - **FUNCTION**: CONTROLS the flow of gas from Gas line Object to Gas Burner Object.
 
-      - IF end-user TURNS Manual Burner Gas valve to right THEN gas WILL NOT flow.
+      - IF end-user TURNS Manual Burner Gas valve to right
 
-      - IF end-user TURNS Manual Burner Gas valve to left THEN gas WILL flow.
+      - THEN gas WILL NOT flow.
+
+      - IF end-user TURNS Manual Burner Gas valve to left
+
+      - THEN gas WILL flow.
 
     <br/><br/>
 
@@ -134,72 +146,108 @@
 
     <br/><br/>
 
-    - ### **Manual Control Unit Object**:
+  - ### **Manual Control Unit Object**:
 
-      - **FUNCTION**: CONTROLS the volume of the flame produced by the Gas Burner Object.
+    - **FUNCTION**: CONTROLS the volume of the flame produced by the Gas Burner Object.
 
-        - Flame Control Knob Object provides a minimum and maximum amount the flame can be adjusted.
+      - Flame Control Knob Object provides a minimum and maximum amount the flame can be adjusted.
 
-        - IF Flame Control Knob is LESS THAN 50% THEN Gas Burner Object will produce a flame volume LESS THAN 50% capacity.
+      - IF Flame Control Knob is LESS THAN 50%
 
-        - IF Flame Control Knob is GREATER THAN 50% THEN Gas Burner Object will produce a flame volume GREATER THAN 50% capacity.
+      - THEN Gas Burner Object will produce flame LESS THAN 50% capacity.
 
-      - **FUNCTION**: CONTROLS the flow of gas from Gas Line Object to Gas Burner Object AND Pilot Light Object.
+      - IF Flame Control Knob is GREATER THAN 50% THEN
 
-        - End-user must PUSH Flame Control Knob in THEN gas WILL flow to Pilot Light Object.
+      - Gas Burner Object will produce flame GREATER THAN 50% capacity.
 
-        <br/><br/>
+    - **FUNCTION**: CONTROLS the flow of gas from Gas Line Object to Gas Burner Object AND Pilot Light Object, by manually holding open the Electronic Controlled Gas Valve.
 
-    - ### **The Igniter Object**:
+      - IF end-user PUSHES Flame Control Knob OPENING Electronic Controlled Gas Valve
 
-      - ATTACHES to Gas Burner Object AND CONNECTS to electric power.
+      - THEN gas WILL flow to Pilot Light Object.
 
-      - **FUNCTION**: PRODUCES an electric spark.
+<br/><br/>
 
-        - IF electric is CONNECTED AND end-user PUSHES Igniter Button THEN Igniter Object will produce an electric spark.
+- ### **The Igniter Object**:
 
-<br/><br/>       I STOPPED HERE!!!!!!!!!
+  - ATTACHES to Gas Burner Object AND CONNECTS to electric power.
 
-    - ### **Pilot light Object**:
+  - **FUNCTION**: PRODUCES an electric spark.
 
-      - ATTACHES to the Gas Burner Object next to the Igniter Object.
+  - IF electric is CONNECTED AND end-user PUSHES Igniter Button
 
-        - **FUNCTION**: CONTINUOUS flame to prevent unburnt gas from entering the living area and ease of lighting when desired.
+  - THEN Igniter Object will produce an electric spark.
 
-            - To light Pilot Light Object USE Flame Control Object PUSH FUNCTION AND Igniter Object FUNCTION SIMULTANEOUSLY.
+<br/><br/>
 
-    <br/><br/>
+- ### **Pilot light Object**:
 
-        - ### **Thermocouple Object**:
+  - ATTACHES to the Gas Burner Object next to the Igniter Object.
 
-          - ATTACHES to the Pilot Light Object directly above the flame.
+  - **FUNCTION**: CONTINUOUS small flame to prevent unburnt gas from entering the living area and ease of lighting when desired.
 
-            - **FUNCTION**: MEASURES temperature output of the Pilot Light Object and produces an electric signal based on that output.
+    - To light Pilot Light Object USE Flame Control Object PUSH FUNCTION AND Igniter Object FUNCTION SIMULTANEOUSLY.
+
+<br/><br/>
+
+- ### **Thermocouple Object**:
+
+  - ATTACHES to the Pilot Light Object directly above the flame.
+
+  - **FUNCTION**: MEASURES temperature output of the Pilot Light Object and produces an electric signal based on that output to be sent to the Electronic Controlled Gas Valve.
+
+    - IF Thermocouple Object MEASURES temperature GREATER THAN specified temperature
+
+    - THEN electric signal sent to Electronic Controlled Gas Valve.
+
+    - IF Thermocouple Object MEASURES temperature LESS THAN specified temperature
+
+    - THEN NO electric signal sent.
+
+<br/><br/>
+
+- ### **Electronic Controlled Gas Valve Object**:
+
+  - Part of the Manual Control Unit Object (internal component), must connect to electric power.
+
+  - **FUNCTION**: CONTROLS the flow of gas from the Gas Line Object to the Pilot Light Object and the Gas Burner Object.
+
+    - To manually operate for temporary gas flow use the Flow Control Knob Object PUSH FUNCTION.
+
+    - For valve to stay open it must receive an electric signal from the Thermocouple FUNCTION
+
+  - **FUNCTION**: ALLOW gas glow if power failure.
+
+    - IF Pilot Light Object is lit AND Electronic Controlled Gas Valve Object receives signal from Thermocouple Object
+
+    - THEN gas WILL flow to Gas Burner Object.
+
+<br/><br/>
 
 - #### **Gas Burner Object**:
 
-      - Location where flames are generated by the burning of gas.
+  - Location where flames are generated by the burning of gas.
 
-      - Sits in the bottom of the Fireplace Insert Object.
+  - Sits in the bottom of the Fireplace Insert Object.
 
-      - Decorative Log Object SITS on top of Gas Burner Object to provide the look of an authentic fire.
+  - Decorative Log Object SITS on top of Gas Burner Object to provide the look of an authentic fire.
 
-      - Rock Wool Object SITS in the front bottom of the Fireplace Insert Object AND on top of the Gas Burner Object to provide the appearance of glowing embers.
+  - Rock Wool Object SITS in the front bottom of the Fireplace Insert Object AND on top of the Gas Burner Object to provide the appearance of glowing embers.
 
-  <br/><br/>
+<br/><br/>
 
-  - Thermocouple Object is connected to the Pilot light Object and the Electric Gas valve Object.
+- Thermocouple Object is connected to the Pilot light Object and the Electric Gas valve Object.
 
-    - The Thermocouple Object provides a small electrical signal to the Electric Gas valve Object instructing it to stay open or closed.
+  - The Thermocouple Object provides a small electrical signal to the Electric Gas valve Object instructing it to stay open or closed.
 
-    - IF Thermocouple Object is GREATER THAN a certain temperature THEN keep Electronic Gas valve Object open.
+  - IF Thermocouple Object is GREATER THAN a certain temperature THEN keep Electronic Gas valve Object open.
 
-    - IF Thermocouple Object is LESS THAN a certain temperature THEN close Electronic Gas Valve Object.
+  - IF Thermocouple Object is LESS THAN a certain temperature THEN close Electronic Gas Valve Object.
 
-  - Electric Gas valve Object is connected the the Gas line Object and the Thermocouple Object.
+- Electric Gas valve Object is connected the the Gas line Object and the Thermocouple Object.
 
-    - The control of gas by the valve is dependent on a small electrical signal received by the Thermocouple Object described above.
+  - The control of gas by the valve is dependent on a small electrical signal received by the Thermocouple Object described above.
 
-    - Its main function is a fail safe to prevent unused gas from entering the home and harming the end user.
+  - Its main function is a fail safe to prevent unused gas from entering the home and harming the end user.
 
-  - Remote infrared/Bluetooth sensor Object is connected to the Manual Control Unit and acts as an interface between the Manual Control Unit Object and the Wireless Remote Control Object.
+- Remote infrared/Bluetooth sensor Object is connected to the Manual Control Unit and acts as an interface between the Manual Control Unit Object and the Wireless Remote Control Object.
