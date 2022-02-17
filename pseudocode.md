@@ -6,7 +6,8 @@
 
 <p><img src = './img/fire.jpg' alt = 'Gas Fireplace' width = '150' /></p>
 
-### **Operational Expectations**: The end-user will be able to turn the fireplace on or off at any desired time or set the unit to operate based on the desired room temperature. The fireplace controls are manual or remote via wireless remote control.
+### **Operational Expectations**: 
+The end-user will be able to turn the fireplace on or off at any desired time or set the unit to operate based on the desired room temperature. The fireplace controls are manual or remote via wireless remote control.
 
 <hr>
 <br>
