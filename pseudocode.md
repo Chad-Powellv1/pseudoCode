@@ -281,29 +281,29 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - **FUNCTION**: DISPLAYS the following
 
-        - IF Gas Fireplace Object is on
+    - IF Gas Fireplace Object is on
 
-        - THEN DISPLAY 🔥
+    - THEN DISPLAY 🔥
 
-        - IF Wireless Remote Object HAS power
+    - IF Wireless Remote Object HAS power
 
-        - THEN DISPLAY current room temperature
+    - THEN DISPLAY current room temperature
 
-        - IF Wireless Remote Object is set to thermostat mode
+    - IF Wireless Remote Object is set to thermostat mode
 
-        - THEN DISPLAY the word SET
+    - THEN DISPLAY the word SET
 
-        - IF Gas Fireplace Object is on AND set to manual mode
+    - IF Gas Fireplace Object is on AND set to manual mode
 
-        - THEN DISPLAY the word TEMP
+    - THEN DISPLAY the word TEMP
 
-        - IF On Button is PUSHED on Wireless Remote Object
+    - IF On Button is PUSHED on Wireless Remote Object
 
-        - THEN DISPLAY the word ON
+    - THEN DISPLAY the word ON
 
-        - IF Off Button is PUSHED on Wireless Remote Object
+    - IF Off Button is PUSHED on Wireless Remote Object
 
-        - THEN DISPLAY the word OF
+    - THEN DISPLAY the word OF
 
     <br/><br/>
 
@@ -313,21 +313,17 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - A desired room temperature will need to be set
 
-    - IF room temperature is LESS THAN desired temperature 
-      
+    - IF room temperature is LESS THAN desired temperature
     - THEN TURN ON Gas Fireplace Object
       - UPDATE Digital display object with current temperature, AND add 🔥 icon
-       
     - IF room temperature is GREATER THAN desired temperature
 
     - THEN TURN OFF Gas Fireplace Object
-      - UPDATE Digital display object with current temperature, AND remove 🔥 icon 
+      - UPDATE Digital display object with current temperature, AND remove 🔥 icon
 
   - **FUNCTION**: temperature CONVERSION from Fahrenheit to Celsius.
 
-   - IF end-user PUSHES On Button Object AND Off Button Object simultaneously 
+  - IF end-user PUSHES On Button Object AND Off Button Object simultaneously
 
-   - THEN covert Fahrenheit temperature to Celsius temperature
-     - UPDATE Digital display object with current temperature in Celsius
-
-      
+  - THEN covert Fahrenheit temperature to Celsius temperature
+    - UPDATE Digital display object with current temperature in Celsius
