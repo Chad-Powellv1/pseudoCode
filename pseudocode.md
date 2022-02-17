@@ -6,7 +6,8 @@
 
 <p><img src = './img/fire.jpg' alt = 'Gas Fireplace' width = '150' /></p>
 
-### **Operational Expectations**: 
+### **Operational Expectations**:
+
 The end-user will be able to turn the fireplace on or off at any desired time or set the unit to operate based on the desired room temperature. The fireplace controls are manual or remote via wireless remote control.
 
 <hr>
@@ -54,7 +55,7 @@ The end-user will be able to turn the fireplace on or off at any desired time or
   - Control Unit
     - Three Way Switch
     - Flame Control Knob
-    - Pilot light Control Feature (Push)
+    - Pilot light Control Feature (Flame Control Knob[PUSH IN])
     - Electronic Controlled Gas Valve
     - Remote Infrared/Bluetooth Sensor
   - Pilot light
@@ -69,9 +70,9 @@ The end-user will be able to turn the fireplace on or off at any desired time or
   - Buttons
     - On button
     - Off button
-    - Mode button: Cycles between manual operation and thermostat mode - Set button: Sets the temperature for the thermostat. 
+    - Mode button: Cycles between manual operation and thermostat mode - Set button: Sets the temperature for the thermostat.
     - Batteries: Two (2) triple (AAA) batteries provide power to the remote. **Note**: first set of batteries will be provided to end user, all replacements will be the responsibility of the end user.
-    <br/><br/>
+      <br/><br/>
 
 # **Objects, Functions, & Dependencies**
 
@@ -91,11 +92,11 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
     - **FUNCTION**: CONTROLS the flow of gas from the Gas Tank Object to Gas Line Object.
 
-      - IF user TURNS Manual Gas Tank valve to the right
+      - IF end-user TURNS Manual Gas Tank valve to the right
 
       - THEN gas WILL NOT flow.
 
-      - IF user TURNS Manual Gas Tank valve to the left
+      - IF end-user TURNS Manual Gas Tank valve to the left
 
       - THEN gas WILL flow.
 
@@ -113,7 +114,7 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
 - ### **Manual Burner Gas valve**:
 
-  - Purchased by end-user and installed by licensed professional. IManual Operation)
+  - Purchased by end-user and installed by licensed professional.
 
     - **FUNCTION**: CONTROLS the flow of gas from Gas line Object to Gas Burner Object.
 
@@ -165,11 +166,11 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
       - **FUNCTION**: RECEIVES wireless signals from the Wireless Remote Object to remotely ACCESS the Control Unit Object.
 
-        - IF Remote Sensor HAS electric power (in case infrared add AND sensor is not COVERED)
+        - IF Remote Sensor HAS electric power (IF infrared add AND sensor is not COVERED)
 
         - THEN Remote Sensor can receive Wireless Remote signal
 
-        - IF Remote Sensor DOES NOT HAVE electric power (in case of infrared add OR sensor is COVERED)
+        - IF Remote Sensor DOES NOT HAVE electric power (IF infrared add OR sensor is COVERED)
 
         - THEN Remote Sensor cannot receive Wireless Remote signal
 
@@ -177,19 +178,19 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
       - Flame Control Knob Object provides a minimum and maximum amount the flame can be adjusted.
 
-      - IF Flame Control Knob is LESS THAN 50%
+        - IF Flame Control Knob is LESS THAN 50%
 
-      - THEN Gas Burner Object will produce flame LESS THAN 50% capacity.
+        - THEN Gas Burner Object will produce flame LESS THAN 50% capacity.
 
-      - IF Flame Control Knob is GREATER THAN 50% THEN
+        - IF Flame Control Knob is GREATER THAN 50% THEN
 
-      - Gas Burner Object will produce flame GREATER THAN 50% capacity.
+        - Gas Burner Object will produce flame GREATER THAN 50% capacity.
 
     - **FUNCTION**: CONTROLS the flow of gas from Gas Line Object to Gas Burner Object AND Pilot Light Object, by manually holding open the Electronic Controlled Gas Valve.
 
-      - IF end-user PUSHES Flame Control Knob OPENING Electronic Controlled Gas Valve
+      - IF end-user PUSHES Flame Control Knob in
 
-      - THEN gas WILL flow to Pilot Light Object.
+      - THEN Electronic Gas Valve manually opens ALLOWING gas to flow to Pilot Light Object.
 
 <br/><br/>
 
@@ -209,7 +210,7 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - ATTACHES to the Gas Burner Object next to the Igniter Object.
 
-  - **FUNCTION**: CONTINUOUS small flame to prevent unburnt gas from entering the living area and ease of lighting when desired.
+  - **FUNCTION**: PRODUCES continuous small flame to prevent unburnt gas from entering the living area and ease of lighting when desired.
 
     - To light Pilot Light Object USE Flame Control Object PUSH FUNCTION AND Igniter Object FUNCTION SIMULTANEOUSLY.
 
@@ -219,15 +220,15 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - ATTACHES to the Pilot Light Object directly above the flame.
 
-  - **FUNCTION**: MEASURES temperature output of the Pilot Light Object and produces an electric signal based on that output to be sent to the Electronic Controlled Gas Valve.
+  - **FUNCTION**: MEASURES temperature output of the Pilot Light Object and produces electric continuity in the circuit based on that output with the Electronic Controlled Gas Valve.
 
     - IF Thermocouple Object MEASURES temperature GREATER THAN specified temperature
 
-    - THEN electric signal sent to Electronic Controlled Gas Valve.
+    - THEN electric continuity is positive in the circuit with the Electronic Controlled Gas Valve.
 
     - IF Thermocouple Object MEASURES temperature LESS THAN specified temperature
 
-    - THEN NO electric signal sent.
+    - THEN NO electric continuity in circuit.
 
 <br/><br/>
 
@@ -243,7 +244,7 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - **FUNCTION**: ALLOW gas glow if power failure.
 
-    - IF Pilot Light Object is lit AND Electronic Controlled Gas Valve Object receives signal from Thermocouple Object
+    - IF Pilot Light Object is lit AND Electronic Controlled Gas Valve Object receives continuity from Thermocouple Object
 
     - THEN gas WILL flow to Gas Burner Object.
 
@@ -296,13 +297,10 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
       - THEN DISPLAY the word TEMP
 
-      - IF On Button is PUSHED on Wireless Remote Object 
+      - IF On Button is PUSHED on Wireless Remote Object
 
       - THEN DISPLAY the word ON
 
-      - IF Off Button is PUSHED on Wireless Remote Object 
+      - IF Off Button is PUSHED on Wireless Remote Object
 
       - THEN DISPLAY the word OF
-
-
-
