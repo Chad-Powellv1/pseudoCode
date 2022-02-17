@@ -278,11 +278,30 @@
   - ### **Digital Display Object**:
 
     - **FUNCTION**: DISPLAYS the following
-      - Gas Fireplace Object is on
-      - Current Room Temperature
-      - The word 'SET' when setting thermostat mode
-      - The word 'TEMP' during manual mode
-      - The word 'ON' when On Button is PUSHED
-      - The word 'OF' when OFF Button is PUSHED
+
+      - IF Gas Fireplace Object is on
+
+      - THEN DISPLAY 🔥
+
+      - IF Wireless Remote Object HAS power
+
+      - THEN DISPLAY current room temperature
+
+      - IF Wireless Remote Object is set to thermostat mode
+
+      - THEN DISPLAY the word SET
+
+      - IF Gas Fireplace Object is on AND set to manual mode
+
+      - THEN DISPLAY the word TEMP
+
+      - IF On Button is PUSHED on Wireless Remote Object 
+
+      - THEN DISPLAY the word ON
+
+      - IF Off Button is PUSHED on Wireless Remote Object 
+
+      - THEN DISPLAY the word OF
+
 
 
