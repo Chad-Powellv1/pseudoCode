@@ -70,8 +70,8 @@ The end-user will be able to turn the fireplace on or off at any desired time or
   - Buttons
     - On button
     - Off button
-    - Mode button: Cycles between manual operation and thermostat mode - Set button: Sets the temperature for the thermostat.
-    - Batteries: Two (2) triple (AAA) batteries provide power to the remote. **Note**: first set of batteries will be provided to end user, all replacements will be the responsibility of the end user.
+    - Mode button
+    - Batteries
       <br/><br/>
 
 # **Objects, Functions, & Dependencies**
@@ -258,15 +258,8 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - Rock Wool Object SITS in the front bottom of the Fireplace Insert Object AND on top of the Gas Burner Object to provide the appearance of glowing embers.
 
-  - **FUNCTION**: GENERATE flame from burning gas.
-    - CONNECTS to:
-      - Pilot Light Object
-      - Thermocouple Object
-      - Igniter Object
-      - Control Unit Object
-      - Gas Line Object
-      - Remote infrared/Bluetooth Sensor Object
-<br/><br/>
+  - **FUNCTION**: GENERATE flame from burning gas. - CONNECTS to: - Pilot Light Object - Thermocouple Object - Igniter Object - Control Unit Object - Gas Line Object - Remote infrared/Bluetooth Sensor Object
+    <br/><br/>
 
 ### **Wireless Remote Object**:
 
@@ -325,7 +318,7 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
 <br/><br/>
 
-- ### **Buttons**: 
+- ### **Buttons**:
 
   - ### **On Button**:
 
@@ -334,7 +327,7 @@ The end-user will be able to turn the fireplace on or off at any desired time or
     - IF Wireless Remote Object has battery power AND end-user PUSHES On Button
 
     - THEN the signal to turn on Gas Burner Object will be sent to Remote Infrared/Bluetooth Sensor Object
-      - UPDATE Digital display object by ADDING 🔥 
+      - UPDATE Digital display object by ADDING 🔥
 
 - ### **Off Button**:
 
@@ -359,4 +352,27 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - **FUNCTION**: SETS the thermostat for the in the Wireless Remote Object which controls the Gas Fireplace Object.
 
-    - 
+    - IF Wireless Remote Object has battery power AND end-user PUSHES AND HOLDS Set Button until desired temperature is displayed (Digital Display Object will dynamical update until desired temperature is reached) AND end-user RELEASES Set Button
+
+      - Wireless Remote Object will TIMEOUT for 3 seconds to store setting
+
+    - THEN Thermostat Object is set
+
+    - IF end-user goes past desired temperature CONTINUE hold Set Button until Digital Display Object reaches 99
+
+    - THEN Digital Display will reset to 43
+
+<br/><br/>
+
+# **Gas Fireplace Object**
+
+- **LIST OF FUNCTIONS NEEDED TO INITIALIZE OBJECT**:
+
+- Manual Gas Valve Function (Gas Tank Object)
+- Manual Burner Gas Valve Function (Gas Burner Object)
+- Three Way Switch Function Remote OR On (Three Way Switch Object)
+- Igniter Object Function _if Pilot Light Object not lit_ (Igniter Object)
+- Pilot Light Function (Pilot Light Object)
+- Thermocouple Function (Thermocouple Object)
+- Electronic Controlled Gas Valve Function receiving continuity signal (Electronic Controlled Gas Valve)
+- Gas Burner Function (Gas Burner Object)
