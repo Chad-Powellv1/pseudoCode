@@ -259,18 +259,13 @@ The end-user will be able to turn the fireplace on or off at any desired time or
   - Rock Wool Object SITS in the front bottom of the Fireplace Insert Object AND on top of the Gas Burner Object to provide the appearance of glowing embers.
 
   - **FUNCTION**: GENERATE flame from burning gas.
-
     - CONNECTS to:
-
       - Pilot Light Object
       - Thermocouple Object
       - Igniter Object
       - Control Unit Object
       - Gas Line Object
       - Remote infrared/Bluetooth Sensor Object
-
-    - To INITIATE the Gas Burner Object
-
 <br/><br/>
 
 ### **Wireless Remote Object**:
@@ -291,7 +286,7 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
     - IF Wireless Remote Object is set to thermostat mode
 
-    - THEN DISPLAY the word SET
+    - THEN DISPLAY the word ROOM
 
     - IF Gas Fireplace Object is on AND set to manual mode
 
@@ -327,3 +322,41 @@ The end-user will be able to turn the fireplace on or off at any desired time or
 
   - THEN covert Fahrenheit temperature to Celsius temperature
     - UPDATE Digital display object with current temperature in Celsius
+
+<br/><br/>
+
+- ### **Buttons**: 
+
+  - ### **On Button**:
+
+  - **FUNCTION**: SENDS wireless signal to Remote Infrared/Bluetooth Sensor Object to turn the Gas Burner Unit on.
+
+    - IF Wireless Remote Object has battery power AND end-user PUSHES On Button
+
+    - THEN the signal to turn on Gas Burner Object will be sent to Remote Infrared/Bluetooth Sensor Object
+      - UPDATE Digital display object by ADDING 🔥 
+
+- ### **Off Button**:
+
+  - **FUNCTION**: SENDS wireless signal toRemote Infrared/Bluetooth Sensor Object to turn the Gas Burner Unit off.
+
+    - IF Wireless Remote Object has battery power AND end-user PUSHES Off Button
+
+    - THEN the signal to turn off Gas Burner Object will be sent to Remote Infrared/Bluetooth Sensor Object
+      - UPDATE Digital display object by REMOVING 🔥
+
+- ### **Mode Button**:
+
+  - **FUNCTION**:SWITCH between manual and thermostat operation of the Gas Fireplace Object.
+
+  - Default state is manual mode.
+
+    - IF Wireless Remote Object has battery power AND end-user PUSHES Mode Button
+
+    - THEN signal sent to Remote Infrared/Bluetooth Sensor Object to switch current state
+
+- ### **Set Button**:
+
+  - **FUNCTION**: SETS the thermostat for the in the Wireless Remote Object which controls the Gas Fireplace Object.
+
+    - 
